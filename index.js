@@ -7,13 +7,14 @@ const config = require('./src/utils/config')
 
 console.log('connecting to mongodb');
 
-    mongoose.connect(`${config.DB_URL}/capstone`)
+    mongoose.connect(`${config.DB_URL}`)
         .then (()=>{
             console.log('connected to mongodb');
 
             // lets start a server
             app.listen(config.PORT,()=>{
                 console.log(`Server running on a Port : ${config.PORT}`);
+
             })
         })
         .catch((error)=>{

@@ -34,9 +34,8 @@ const userSchema = new mongoose.Schema({
     },
     location : String,
     occupation : String,
-    viewedProfiles : Number,
 },{
     timestamps : true
 });
 
-module.exports = mongoose.model('User',userSchema,'users');
+module.exports = mongoose.model('User',userSchema);
